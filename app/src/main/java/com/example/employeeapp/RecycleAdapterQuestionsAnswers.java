@@ -56,11 +56,12 @@ public class RecycleAdapterQuestionsAnswers extends RecyclerView.Adapter<Recycle
         holder.checkBoxOption3.setEnabled(false);
         holder.checkBoxOption4.setEnabled(false);
 
-        questionOptionsList = questionList.get(position).getQuestionOptions();
+        questionOptionsList = questionList.get(position).getQuestionOptions();  // getting all the options of a paticular question
+
         Log.e("QUestionAndOptions",questionList.get(position).getQuestionContent()+"options size: "+questionOptionsList.size());
 
 
-        int correct_ans_count = 0;
+        int correct_ans_count = 0;    // for checking how many options are correct for one question their can be multiple right options for a question
         String optionContent="",it_Selelected="";
         for (int j=0;j<questionOptionsList.size();j++){
 
