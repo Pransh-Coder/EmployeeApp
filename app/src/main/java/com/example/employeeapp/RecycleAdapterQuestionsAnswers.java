@@ -74,7 +74,7 @@ public class RecycleAdapterQuestionsAnswers extends RecyclerView.Adapter<Recycle
 
             Log.e("QUestionAndOptions", ""+j+"   "+optionContent+"  rightAns "+it_Selelected);
 
-            if (j==0){
+            if (j==0){      // for the zeorth position set the optionContent of 0
                 //holder.option1.setText(optionContent);
                 holder.radioButton_1.setText(optionContent);
                 holder.checkBoxOption1.setText(optionContent);
@@ -138,7 +138,7 @@ public class RecycleAdapterQuestionsAnswers extends RecyclerView.Adapter<Recycle
         }
         Log.e("correctAns", ""+correct_ans_count);
 
-        if (correct_ans_count>1){
+        if (correct_ans_count>1){       //if correct_ans_count is more than one then we need to use checkboxes rather than radio buttons
 
             holder.checkBoxConstraint.setVisibility(View.VISIBLE);
             holder.radioConstraint.setVisibility(View.GONE);
